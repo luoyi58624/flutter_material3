@@ -23,17 +23,17 @@ class _HomePageState extends State<HomePage> {
             'webview测试',
             page: const WebviewTestPage(),
           ),
-          ListTileWidget(
-            'webview测试',
-            page: const WebviewTestPage(),
-          ),
-          ListTileWidget(
-            'webview测试',
-            onTap: () => Get.to(
-              () => const WebviewTestPage(),
-              transition: Transition.noTransition,
-            ),
-          ),
+          ...Transition.values
+              .map(
+                (e) => ListTileWidget(
+                  'webview测试 - ${e.name}',
+                  onTap: () => Get.to(
+                    () => const WebviewTestPage(),
+                    transition: e,
+                  ),
+                ),
+              )
+              .toList(),
         ],
       ),
     );
