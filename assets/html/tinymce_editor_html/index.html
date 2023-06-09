@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ediotr</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      html, body {
+          width: 100%;
+          height: 100%;
+      }
+
+      .tox-tinymce {
+          border: none !important;
+          height: 100% !important;
+      }
+
+      .tox-editor-header {
+          display: none !important;
+      }
+  </style>
+</head>
+<body>
+<span id="tinymce-editor"></span>
+<script src="./tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+  window['tinymce'].init({
+    selector: '#tinymce-editor',
+    menubar: false, // 禁止显示菜单栏
+    statusbar: false, // 禁止显示状态栏
+    contextmenu: false, // 禁止编辑器右键菜单
+    toolbar: '',
+    placeholder: '请输入...',
+  })
+</script>
+</body>
+</html>

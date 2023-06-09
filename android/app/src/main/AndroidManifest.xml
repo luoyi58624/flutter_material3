@@ -2,7 +2,6 @@
 
     <!--网络权限-->
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.VIDEO_CAPTURE" />
@@ -39,15 +38,9 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-
-        <provider
-    android:name="com.pichillilorenzo.flutter_inappwebview.InAppWebViewFileProvider"
-    android:authorities="${applicationId}.flutter_inappwebview.fileprovider"
-    android:exported="false"
-    android:grantUriPermissions="true">
-    <meta-data
-        android:name="android.support.FILE_PROVIDER_PATHS"
-        android:resource="@xml/provider_paths" />
-</provider>    
+        <!-- Hybrid composition -->
+        <meta-data
+                android:name="io.flutter.embedded_views_preview"
+                android:value="true" />
     </application>
 </manifest>

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_material3/page/root/index.dart';
 import 'package:get/get.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MainApp());
 }
 

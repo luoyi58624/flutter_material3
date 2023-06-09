@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material3/common/widget.dart';
+import 'package:flutter_material3/page/test/rich_text_editor.dart';
 import 'package:flutter_material3/page/test/webview.dart';
-import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,15 +24,8 @@ class _HomePageState extends State<HomePage> {
             page: const WebviewTestPage(),
           ),
           ListTileWidget(
-            'webview测试',
-            page: const WebviewTestPage(),
-          ),
-          ListTileWidget(
-            'webview测试',
-            onTap: () => Get.to(
-              () => const WebviewTestPage(),
-              transition: Transition.noTransition,
-            ),
+            '富文本编辑器测试',
+            page: const RichTextEditorPage(),
           ),
         ],
       ),
