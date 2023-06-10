@@ -8,16 +8,22 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int count = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('首页'),
       ),
-      body: ListView(
-        children: [
-
-        ],
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            setState(() {
+              count++;
+            });
+          },
+          child: Text('count: $count'),
+        ),
       ),
     );
   }
