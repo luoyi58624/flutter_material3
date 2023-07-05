@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_material3/router/routes.dart';
 import 'package:get/get.dart';
 
 class ToolPage extends StatefulWidget {
@@ -20,7 +21,7 @@ class _ToolPageState extends State<ToolPage> {
           padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
           child: ElevatedButton(
             onPressed: () {
-              Get.to(() => ListDetailPage(title: '列表详情-$index'));
+              Get.toNamed(Routes.toolDetail2);
             },
             child: Text('列表-$index'),
           ),
@@ -31,14 +32,34 @@ class _ToolPageState extends State<ToolPage> {
 }
 
 class ListDetailPage extends StatelessWidget {
-  const ListDetailPage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  const ListDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: const Text('xxx'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Get.back();
+          },
+          child: const Text('返回列表'),
+        ),
+      ),
+    );
+  }
+}
+
+class ListDetailPage2 extends StatelessWidget {
+  const ListDetailPage2({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('xxx'),
       ),
       body: Center(
         child: ElevatedButton(

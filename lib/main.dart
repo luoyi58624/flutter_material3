@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       initialRoute: '/',
-      getPages: routePages,
+      getPages: Pages.pages,
       theme: ThemeData(
         useMaterial3: true,
       ),
