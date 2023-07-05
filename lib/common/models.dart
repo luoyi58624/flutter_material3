@@ -22,6 +22,14 @@ class NavModel {
   final Widget page;
 }
 
+class RouteModel {
+  const RouteModel(this.title, this.icon, this.path);
+
+  final String title;
+  final IconData icon;
+  final String path;
+}
+
 /// 包含label-value结构的简单数据模型
 class LabelModel {
   final String label;

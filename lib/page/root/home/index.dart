@@ -11,6 +11,7 @@ class _HomePageState extends State<HomePage> {
   int count = 0;
   @override
   Widget build(BuildContext context) {
+    debugPrint('home page build');
     return Scaffold(
       appBar: AppBar(
         title: const Text('首页'),

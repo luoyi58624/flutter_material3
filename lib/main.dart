@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_material3/page/root/index.dart';
 import 'package:get/get.dart';
+
+import 'router/pages.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,10 +14,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialRoute: '/',
+      getPages: routePages,
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const RootPage(),
     );
   }
 }

@@ -1,17 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!--网络权限-->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.VIDEO_CAPTURE" />
-    <uses-permission android:name="android.permission.AUDIO_CAPTURE" />
-
     <application
         android:label="flutter_material3"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
-        android:usesCleartextTraffic="true">
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -38,9 +29,5 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-        <!-- Hybrid composition -->
-        <meta-data
-                android:name="io.flutter.embedded_views_preview"
-                android:value="true" />
     </application>
 </manifest>
